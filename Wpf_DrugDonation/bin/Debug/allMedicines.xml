@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfMedicine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Medicine>
+    <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+    <serialNumber>129304</serialNumber>
+    <medName>Paracetamol</medName>
+    <strength>1000mg</strength>
+    <expiryDate>2020-06-18T00:00:00</expiryDate>
+    <packSize>20</packSize>
+  </Medicine>
+  <Medicine>
+    <donorID>cd557dc2-4659-4413-a232-79ac8ec1a13e</donorID>
+    <serialNumber>293e34</serialNumber>
+    <medName>Crocin</medName>
+    <strength>500mg</strength>
+    <expiryDate>2020-06-24T00:00:00</expiryDate>
+    <packSize>10</packSize>
+  </Medicine>
+  <Medicine>
+    <donorID>3af4e756-b3d3-4db7-90f7-be7aff630f73</donorID>
+    <serialNumber>231312</serialNumber>
+    <medName>paracetamol</medName>
+    <strength>100mg</strength>
+    <expiryDate>2020-09-12T00:00:00</expiryDate>
+    <packSize>10</packSize>
+  </Medicine>
+</ArrayOfMedicine>

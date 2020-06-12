@@ -1,0 +1,100 @@
+﻿<Window x:Class="Wpf_DrugDonation.W_Withdraw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_DrugDonation"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource Sty_win}">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="5">
+<!--Stackpanel for Header buttons-->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Height="50" Width="680">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="5">
+                    <TextBlock Text="Withdrawals" FontSize="22" FontWeight="Bold" Padding="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="550" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" >
+                        <StackPanel Orientation="Vertical">
+                            <Button x:Name="Btn_Donate" Content="Donate" Style="{StaticResource Sty_Header_Btn}" Click="Btn_Donate_Click"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="3,0,10,0">
+                            <Button x:Name="Btn_Withdraw" Content="Withdraw" Style="{StaticResource Sty_Header_Btn}" IsEnabled="True" Foreground="Gray"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="330" Margin="10,0">
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="315" Width="256" Margin="0,0,0,-0.4">
+                    <StackPanel Orientation="Vertical" Margin="0.2,0.2,0.2,-1.2">
+<!--Stackpanel to filter medicine details-->
+                        <StackPanel Orientation="Horizontal" Height="90" Width="256" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <Border BorderBrush="Black" BorderThickness="0,0,0,1" Width="256">
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="245" Margin="5">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                        <TextBlock Text="Search Medicine" FontSize="16" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                                        <TextBlock Text="Find Medicine" FontSize="12" Margin="0,10,13,0" VerticalAlignment="Top"/>
+                                        <TextBox x:Name="Tbx_filter" Text="" Width="140" Height="20" VerticalAlignment="Bottom" Margin="10" ToolTip="Please Enter Medicine Name or Serial Number here" TextChanged="Tbx_filter_TextChanged"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal"  Margin="98,0,-0.2,0">
+                                        <CheckBox x:Name="chckBx_Withdrawn" Content="Withdrawn Medicines" Checked="chckBx_Withdrawn_Checked" Unchecked="chckBx_Withdrawn_Unchecked"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+
+                        <Grid Height="235" Margin="0,0,0.4,0">
+                            <DataGrid x:Name="Dg_AllMedicines" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Height="225" VerticalAlignment="Top" SelectionChanged="Dg_AllMedicines_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Medicine Name" Binding="{Binding medName}" Width="120"/>
+                                    <DataGridTextColumn Header="Strength" Binding="{Binding strength}" Width="155"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+<!--Stackpanel medicine details-->       
+                <Border BorderBrush="Black" BorderThickness="0,1,1,1" Width="397" Margin="0,0,0,14.6" Background="White">
+                    <StackPanel DataContext="{Binding SelectedItem, ElementName=Dg_AllMedicines}" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Height="314" Margin="0,0.2,-1,-0.6" Width="397">
+                        <StackPanel Orientation="Horizontal" Margin="20,10" >
+                            <TextBlock x:Name="Tblck_withdrawals_details" Text="Medicine Details" FontSize="20" FontWeight="Bold" Margin="0,0,-0.2,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,0,0">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,10">
+                                <TextBlock Text="Serial Number" Style="{StaticResource Sty_withdraw_dtls}"/>
+                                <TextBox x:Name="Tbx_Med_sNum" Text="{Binding serialNumber}" Width="170" IsEnabled="False"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,10">
+                                <TextBlock Text="Medicine Name"  Style="{StaticResource Sty_withdraw_dtls}" />
+                                <TextBox x:Name="Tbx_Med_Name" Text="{Binding medName}" Width="170" IsEnabled="False"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,10">
+                                <TextBlock Text="Strength" Style="{StaticResource Sty_withdraw_dtls}"/>
+                                <TextBox x:Name="Tbx_Med_Strength" Text="{Binding strength}" Width="170" IsEnabled="False"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,10">
+                                <TextBlock Text="Expiry" Style="{StaticResource Sty_withdraw_dtls}"/>
+                                <DatePicker x:Name="Tbx_Med_Expiry" SelectedDate = "{Binding expiryDate}" Width="170" IsEnabled="False"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,10">
+                                <TextBlock Text="Pack Size" Style="{StaticResource Sty_withdraw_dtls}"/>
+                                <TextBox x:Name="Tbx_Med_PackSize" Text="{Binding packSize}" Width="170" IsEnabled="False"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="115,10,0,0">
+                                <Button x:Name="Btn_Withdraw_med" Content="Withdraw" Width="70" Height="24" Click="Btn_Withdraw_med_Click" IsEnabled="False" Margin="0,0,10,0" ToolTip="Click to withdraw a medicine"/>
+                                <Button x:Name="Btn_DonorDetails" Content="Donor Details" Width="80" Height="24" Click="Btn_DonorDetails_Click" IsEnabled="False"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                </Border>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

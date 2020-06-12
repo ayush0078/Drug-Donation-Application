@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<ArrayOfDonor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Donor>
+    <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+    <firstName>Aayush</firstName>
+    <lastName>JAin</lastName>
+    <governmentID>23123131</governmentID>
+    <contactNumber>+49 176 87515629</contactNumber>
+    <medicines>
+      <Medicine>
+        <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+        <serialNumber>1</serialNumber>
+        <medName>allegra</medName>
+        <strength>121</strength>
+        <expiryDate>2020-06-09T00:00:00</expiryDate>
+        <packSize>10</packSize>
+      </Medicine>
+      <Medicine>
+        <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+        <serialNumber>129304</serialNumber>
+        <medName>Paracetamol</medName>
+        <strength>1000mg</strength>
+        <expiryDate>2020-06-18T00:00:00</expiryDate>
+        <packSize>20</packSize>
+      </Medicine>
+      <Medicine>
+        <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+        <serialNumber>200012</serialNumber>
+        <medName>FLORA BC</medName>
+        <strength>750mg</strength>
+        <expiryDate>2021-02-14T00:00:00</expiryDate>
+        <packSize>10</packSize>
+      </Medicine>
+    </medicines>
+  </Donor>
+  <Donor>
+    <donorID>534f1ba5-d3d4-400f-9aef-78d7a044e399</donorID>
+    <firstName>Sahil</firstName>
+    <lastName>Saini</lastName>
+    <governmentID>220304rtsh1</governmentID>
+    <contactNumber>+49 176 12345678</contactNumber>
+    <medicines>
+      <Medicine>
+        <donorID>534f1ba5-d3d4-400f-9aef-78d7a044e399</donorID>
+        <serialNumber>201102</serialNumber>
+        <medName>Allegra M</medName>
+        <strength>200mg</strength>
+        <expiryDate>2021-04-24T00:00:00</expiryDate>
+        <packSize>10</packSize>
+      </Medicine>
+    </medicines>
+  </Donor>
+  <Donor>
+    <donorID>cd557dc2-4659-4413-a232-79ac8ec1a13e</donorID>
+    <firstName>Tanay</firstName>
+    <lastName>Dalvi</lastName>
+    <governmentID>rtsfr3231231</governmentID>
+    <contactNumber>+49 186 23456789</contactNumber>
+    <medicines>
+      <Medicine>
+        <donorID>cd557dc2-4659-4413-a232-79ac8ec1a13e</donorID>
+        <serialNumber>293e34</serialNumber>
+        <medName>Crocin</medName>
+        <strength>500mg</strength>
+        <expiryDate>2020-06-24T00:00:00</expiryDate>
+        <packSize>10</packSize>
+      </Medicine>
+    </medicines>
+  </Donor>
+  <Donor>
+    <donorID>9cdf9a41-bde6-4172-b6f1-b4e903319e05</donorID>
+    <firstName>Karan</firstName>
+    <lastName>Dullo</lastName>
+    <governmentID>33425ref</governmentID>
+    <contactNumber>+49 176 87515629</contactNumber>
+    <medicines />
+  </Donor>
+  <Donor>
+    <donorID>3af4e756-b3d3-4db7-90f7-be7aff630f73</donorID>
+    <firstName>aryan</firstName>
+    <lastName>jain</lastName>
+    <governmentID>1231232</governmentID>
+    <contactNumber>+49 176 87515629</contactNumber>
+    <medicines>
+      <Medicine>
+        <donorID>3af4e756-b3d3-4db7-90f7-be7aff630f73</donorID>
+        <serialNumber>231312</serialNumber>
+        <medName>paracetamol</medName>
+        <strength>100mg</strength>
+        <expiryDate>2020-09-12T00:00:00</expiryDate>
+        <packSize>10</packSize>
+      </Medicine>
+    </medicines>
+  </Donor>
+</ArrayOfDonor>

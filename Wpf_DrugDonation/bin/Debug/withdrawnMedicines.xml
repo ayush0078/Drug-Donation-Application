@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfMedicine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Medicine>
+    <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+    <serialNumber>1</serialNumber>
+    <medName>allegra</medName>
+    <strength>121</strength>
+    <expiryDate>2020-06-09T00:00:00</expiryDate>
+    <packSize>10</packSize>
+  </Medicine>
+  <Medicine>
+    <donorID>2c44dd6e-bfa2-49c2-8bc8-c7670310ba10</donorID>
+    <serialNumber>200012</serialNumber>
+    <medName>FLORA BC</medName>
+    <strength>750mg</strength>
+    <expiryDate>2021-02-14T00:00:00</expiryDate>
+    <packSize>10</packSize>
+  </Medicine>
+  <Medicine>
+    <donorID>534f1ba5-d3d4-400f-9aef-78d7a044e399</donorID>
+    <serialNumber>201102</serialNumber>
+    <medName>Allegra M</medName>
+    <strength>200mg</strength>
+    <expiryDate>2021-04-24T00:00:00</expiryDate>
+    <packSize>10</packSize>
+  </Medicine>
+</ArrayOfMedicine>
